@@ -1,0 +1,22 @@
+*.class
+*.log
+*.tsv
+# sbt specific
+.cache
+.history
+.lib/
+dist/*
+target/
+common/target/
+dummy/target/
+rest/target/
+lib_managed/
+src_managed/
+project/boot/
+project/target/
+project/plugins/project/
+
+# Scala-IDE specific
+.idea/
+rest.iml
+.DS_Store
