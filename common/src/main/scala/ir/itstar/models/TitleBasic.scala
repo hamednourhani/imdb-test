@@ -18,7 +18,7 @@ case class TitleBasic(
     originalTitle: String,
     isAdult: Boolean,
     startYear: Int,
-    endYear: Int,
-    runtimeMinutes: Long,
+    endYear: Option[Int]=None,
+    runtimeMinutes: Option[Long]=None,
     genres: String
 )

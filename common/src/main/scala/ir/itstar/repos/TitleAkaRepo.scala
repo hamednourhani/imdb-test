@@ -16,9 +16,9 @@ trait TitleAkaComponent {
     def titleId         = column[String]("titleId", O.PrimaryKey)
     def ordering        = column[Int]("ordering")
     def title           = column[String]("title")
-    def region          = column[String]("region")
-    def language        = column[String]("language")
-    def types           = column[String]("types")
+    def region          = column[Option[String]]("region",O.Default(null))
+    def language        = column[Option[String]]("language",O.Default(null))
+    def types           = column[Option[String]]("types",O.Default(null))
     def attributes      = column[Option[String]]("attributes", O.Default(null))
     def isOriginalTitle = column[Boolean]("isOriginalTitle")
 

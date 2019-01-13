@@ -25,10 +25,9 @@ case class TitleAka(
     titleId: String,
     ordering: Int,
     title: String,
-    region: String,
-    language: String,
-    types: String,
+    region: Option[String] = None,
+    language: Option[String] = None,
+    types: Option[String] = None,
     attributes: Option[String] = None,
     isOriginalTitle: Boolean
 )
-

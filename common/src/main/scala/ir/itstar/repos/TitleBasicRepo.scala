@@ -20,8 +20,8 @@ trait TitleBasicComponent {
     def originalTitle  = column[String]("originalTitle")
     def isAdult        = column[Boolean]("isAdult")
     def startYear      = column[Int]("startYear")
-    def endYear        = column[Int]("endYear")
-    def runtimeMinutes = column[Long]("runtimeMinutes")
+    def endYear        = column[Option[Int]]("endYear",O.Default(null))
+    def runtimeMinutes = column[Option[Long]]("runtimeMinutes",O.Default(null))
     def genres         = column[String]("genres")
 
     def * : ProvenShape[TitleBasic] =

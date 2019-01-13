@@ -15,8 +15,8 @@ trait TitleCrewComponent {
   private[TitleCrewComponent] final class TitleCrewTable(tag: Tag) extends Table[TitleCrew](tag, "title_crews") {
 
     def tconst    = column[String]("tconst")
-    def directors = column[String]("directors")
-    def writers   = column[String]("writers")
+    def directors = column[Option[String]]("directors",O.Default(null))
+    def writers   = column[Option[String]]("writers",O.Default(null))
 
     def * : ProvenShape[TitleCrew] =
       (

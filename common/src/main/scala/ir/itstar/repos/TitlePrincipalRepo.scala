@@ -18,8 +18,8 @@ trait TitlePrincipalComponent {
     def tconst     = column[String]("tconst")
     def ordering   = column[Int]("ordering")
     def category   = column[String]("category")
-    def job        = column[String]("job")
-    def characters = column[String]("characters")
+    def job        = column[Option[String]]("job",O.Default(null))
+    def characters = column[Option[String]]("characters",O.Default(null))
 
     def * : ProvenShape[TitlePrincipal] =
       (

@@ -9,6 +9,6 @@ package ir.itstar.models
 case class TitleEpisode(
     tconst: String,
     parentTconst: String,
-    seasonNumber: Int,
-    episodeNumber: Int
+    seasonNumber: Option[Int]=None,
+    episodeNumber: Option[Int]=None
 )

@@ -17,8 +17,8 @@ trait TitleEpisodeComponent {
 
     def tconst        = column[String]("tconst")
     def parentTconst  = column[String]("parentTconst")
-    def seasonNumber  = column[Int]("seasonNumber")
-    def episodeNumber = column[Int]("episodeNumber")
+    def seasonNumber  = column[Option[Int]]("seasonNumber",O.Default(null))
+    def episodeNumber = column[Option[Int]]("episodeNumber",O.Default(null))
 
     def * : ProvenShape[TitleEpisode] =
       (

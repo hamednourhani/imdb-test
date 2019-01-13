@@ -12,6 +12,6 @@ case class TitlePrincipal(
     tconst: String,
     ordering: Int,
     category: String,
-    job: String,
-    characters: String,
+    job: Option[String] = None,
+    characters: Option[String] = None
 )

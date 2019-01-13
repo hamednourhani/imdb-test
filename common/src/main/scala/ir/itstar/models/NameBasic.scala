@@ -12,7 +12,7 @@ case class NameBasic(
     nconst: String,
     primaryName: String,
     birthYear: String,
-    deathYear: String,
+    deathYear: Option[String]=None,
     primaryProfession: String,
     knownForTitles: String
 )
