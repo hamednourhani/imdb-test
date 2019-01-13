@@ -1,5 +1,5 @@
 package ir.itstar.repos
-import ir.itstar.db.DatabaseConnector
+import ir.itstar.db.DatabaseConnectorImpl
 import ir.itstar.models.TitleAka
 import slick.lifted.ProvenShape
 
@@ -9,7 +9,7 @@ object TitleAkaRepoImpl extends TitleAkaRepo with TitleAkaComponent {}
 
 trait TitleAkaComponent {
 
-  import DatabaseConnector.profile.api._
+  import DatabaseConnectorImpl.profile.api._
 
   private[TitleAkaComponent] final class TitleAkaTable(tag: Tag) extends Table[TitleAka](tag, "title_basics") {
 

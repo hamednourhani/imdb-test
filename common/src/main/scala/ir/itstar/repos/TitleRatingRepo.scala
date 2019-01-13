@@ -1,6 +1,6 @@
 package ir.itstar.repos
 
-import ir.itstar.db.DatabaseConnector
+import ir.itstar.db.DatabaseConnectorImpl
 import ir.itstar.models.TitleRating
 import slick.lifted.ProvenShape
 
@@ -10,7 +10,7 @@ object TitleRatingRepoImpl extends TitleRatingRepo with TitleRatingComponent {}
 
 trait TitleRatingComponent {
 
-  import DatabaseConnector.profile.api._
+  import DatabaseConnectorImpl.profile.api._
 
   private[TitleRatingComponent] final class TitleRatingTable(tag: Tag)
       extends Table[TitleRating](tag, "title_ratings") {

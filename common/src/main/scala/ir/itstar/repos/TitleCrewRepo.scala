@@ -1,6 +1,6 @@
 package ir.itstar.repos
 
-import ir.itstar.db.DatabaseConnector
+import ir.itstar.db.DatabaseConnectorImpl
 import ir.itstar.models.TitleCrew
 import slick.lifted.ProvenShape
 
@@ -10,7 +10,7 @@ object TitleCrewRepoImpl extends TitleCrewRepo with TitleCrewComponent {}
 
 trait TitleCrewComponent {
 
-  import DatabaseConnector.profile.api._
+  import DatabaseConnectorImpl.profile.api._
 
   private[TitleCrewComponent] final class TitleCrewTable(tag: Tag) extends Table[TitleCrew](tag, "title_crews") {
 

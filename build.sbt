@@ -36,6 +36,7 @@ lazy val dependencies =
     val hikariCpV     = "2.7.0"
     val slickPgV      = "0.16.3"
     val alpakaV       = "1.0-M1"
+    val logBackV      = "1.2.3"
 
     val akkaHttp         = "com.typesafe.akka"          %% "akka-http"                 % akkaHttpV
     val akkaStream       = "com.typesafe.akka"          %% "akka-stream"               % akkaVersion
@@ -51,6 +52,7 @@ lazy val dependencies =
     val catsKernel       = "org.typelevel"              %% "cats-kernel"               % catsV
     val slickPgSprayJson = "com.github.tminglei"        %% "slick-pg_spray-json"       % slickPgV
     val slickPg          = "com.github.tminglei"        %% "slick-pg"                  % slickPgV
+    val logback          = "ch.qos.logback"             % "logback-classic"            % logBackV
   }
 
 lazy val assemblySettings = Seq(
@@ -68,6 +70,7 @@ lazy val commonDependencies = Seq(
   dependencies.postgres,
   dependencies.hikariCP,
   dependencies.logging,
+  dependencies.logback
 )
 
 lazy val global = project

@@ -1,6 +1,6 @@
 package ir.itstar.repos
 
-import ir.itstar.db.DatabaseConnector
+import ir.itstar.db.DatabaseConnectorImpl
 import ir.itstar.models.TitleEpisode
 import slick.lifted.ProvenShape
 
@@ -10,7 +10,7 @@ object TitleEpisodeRepoImpl extends TitleEpisodeRepo with TitleEpisodeComponent 
 
 trait TitleEpisodeComponent {
 
-  import DatabaseConnector.profile.api._
+  import DatabaseConnectorImpl.profile.api._
 
   private[TitleEpisodeComponent] final class TitleEpisodeTable(tag: Tag)
       extends Table[TitleEpisode](tag, "title_episodes") {

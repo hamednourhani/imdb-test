@@ -16,8 +16,8 @@ object DBInitializer
     with TitlePrincipalComponent
     with TitleRatingComponent {
 
-  import DatabaseConnector.api._
-  import DatabaseConnector.db
+  import DatabaseConnectorImpl.api._
+  import DatabaseConnectorImpl.db
 
   val tables = List(
     nameBasicsTable,

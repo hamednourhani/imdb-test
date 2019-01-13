@@ -1,6 +1,6 @@
 package ir.itstar.repos
 
-import ir.itstar.db.DatabaseConnector
+import ir.itstar.db.DatabaseConnectorImpl
 import ir.itstar.models.NameBasic
 import slick.lifted.ProvenShape
 
@@ -10,7 +10,7 @@ object NameBasicRepoImpl extends NameBasicRepo with NameBasicComponent {}
 
 trait NameBasicComponent {
 
-  import DatabaseConnector.profile.api._
+  import DatabaseConnectorImpl.profile.api._
 
   private[NameBasicComponent] final class NameBasicTable(tag: Tag) extends Table[NameBasic](tag, "name_basics") {
 
